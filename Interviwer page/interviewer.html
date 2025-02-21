@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interviewer Booking</title>
+    <link rel="stylesheet" href="interviewer.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Available Interviewers</h2>
+        <div class="interviewer-list">
+            <!-- Interviewer 1 -->
+            <div class="interviewer-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDFBhqNfOfWVbDz8RdYZ9jbEeN5deaAX-tAA&s.jpg" alt="Interviewer">
+                <h3>John Doe</h3>
+                <p>Specialization: Software Development</p>
+                <button class="book-btn" onclick="openModal()">Book Interview</button>
+            </div>
+
+            <!-- Interviewer 2 -->
+            <div class="interviewer-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDFBhqNfOfWVbDz8RdYZ9jbEeN5deaAX-tAA&s.jpg" alt="Interviewer">
+                <h3>Jane Smith</h3>
+                <p>Specialization: Data Science</p>
+                <button class="book-btn" onclick="openModal()">Book Interview</button>
+            </div> 
+            
+            <!-- Interviewer 3 -->
+            <div class="interviewer-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDFBhqNfOfWVbDz8RdYZ9jbEeN5deaAX-tAA&s.jpg" alt="Interviewer">
+                <h3>John Doe</h3>
+                <p>Specialization: Web Development</p>
+                <button class="book-btn" onclick="openModal()">Book Interview</button>
+            </div>
+
+             <!-- Interviewer 4 -->
+             <div class="interviewer-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDFBhqNfOfWVbDz8RdYZ9jbEeN5deaAX-tAA&s.jpg" alt="Interviewer">
+                <h3>John Doe</h3>
+                <p>Specialization: Machine Learning</p>
+                <button class="book-btn" onclick="openModal()">Book Interview</button>
+            </div>
+
+             <!-- Interviewer 5 -->
+             <div class="interviewer-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDFBhqNfOfWVbDz8RdYZ9jbEeN5deaAX-tAA&s.jpg" alt="Interviewer">
+                <h3>John Doe</h3>
+                <p>Specialization: HR</p>
+                <button class="book-btn" onclick="openModal()">Book Interview</button>
+            </div>
+
+             <!-- Interviewer 6 -->
+             <div class="interviewer-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDFBhqNfOfWVbDz8RdYZ9jbEeN5deaAX-tAA&s.jpg" alt="Interviewer">
+                <h3>John Doe</h3>
+                <p>Specialization: Software Development</p>
+                <button class="book-btn" onclick="openModal()">Book Interview</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Book an Interview</h3>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="name">Candidate Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Select Interview Date</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Select Time Slot</label>
+                    <select id="time" required>
+                        <option value="">Choose a time slot</option>
+                        <option>10:00 AM - 11:00 AM</option>
+                        <option>12:00 PM - 1:00 PM</option>
+                        <option>2:00 PM - 3:00 PM</option>
+                        <option>4:00 PM - 5:00 PM</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="interviewType">Interview Type</label>
+                    <select id="interviewType" required>
+                        <option value="">Select Type</option>
+                        <option>Beginner</option>
+                        <option>Intermediate</option>
+                        <option>Advanced</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Interview Mode</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="mode" value="Online" required> Online</label>
+                        <label><input type="radio" name="mode" value="Offline"> Offline</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="resume">Upload Resume</label>
+                    <input type="file" id="resume" accept=".pdf,.doc,.docx" required>
+                </div>
+
+                <button type="submit">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="interviewer.js"></script>
+</body>
+</html>
